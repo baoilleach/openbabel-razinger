@@ -44,10 +44,10 @@ namespace OpenBabel {
    */
   Eigen::MatrixXi stereoParityMatrix(unsigned int n)
   {
-    unsigned int N = pow(2, n);
+    unsigned int N = static_cast<unsigned int> (pow(2., (int) n));
     std::vector<ParityGenerator> generators;
     for (unsigned int j = 0; j < n; ++j) {
-      generators.push_back(ParityGenerator(pow(2, n - j - 1)));
+      generators.push_back(ParityGenerator(static_cast<unsigned int> (pow(2., (int) (n - j - 1)))));
     }
 
     Eigen::MatrixXi parityMatrix(Eigen::MatrixXi::Zero(N, n));

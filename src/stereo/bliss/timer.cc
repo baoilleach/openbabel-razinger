@@ -1,12 +1,15 @@
-#include <unistd.h>
+#ifndef _MSC_VER
+  #include <unistd.h>
+#endif
+/*
 #include <sys/times.h>
 #include "timer.hh"
-
+*/
 /*
  * Copyright (c) Tommi Junttila
  * Released under the GNU General Public License version 2.
  */
-
+/*
 namespace bliss {
 
 static const double numTicksPerSec = (double)(sysconf(_SC_CLK_TCK));
@@ -39,3 +42,4 @@ double Timer::get_duration()
 }
 
 } // namespace bliss
+*/

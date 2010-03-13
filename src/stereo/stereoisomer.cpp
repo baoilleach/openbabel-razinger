@@ -208,7 +208,7 @@ namespace OpenBabel {
 
     // multiply each row of the stereoparity matrix with the signed 
     // permutation matrices and look for redundancies
-    unsigned int N = pow(2, stereoUnits.size());
+    unsigned int N = static_cast<unsigned int> (pow(2., (int) stereoUnits.size()));
     unsigned int numEnantiomers = 0;
     unsigned int numDiastereomers = 0;
     std::vector<unsigned int> redundant;
