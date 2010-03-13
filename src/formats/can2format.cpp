@@ -12,8 +12,8 @@
 
 
 using namespace std;
-namespace OpenBabel
-{
+using namespace OpenBabel;
+
 
 void IdsToSymClasses(OBMol *mol, OBTetrahedralStereo::Config &config, 
     const std::vector<unsigned int> &symClasses)
@@ -166,6 +166,9 @@ std::string removeNewLine(const std::string &str)
 {
   return str.substr(0, str.size()-1);
 }
+
+namespace OpenBabel
+{
 
 std::string canonicalSmiles(OBMol &mol_orig, std::vector<std::string> &stereoisomers)
 {
